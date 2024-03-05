@@ -10,7 +10,6 @@ from prefix_meta.models import Data
 @require_auth()
 @load_instance()
 def export_locations(request, instance, ip, masklen, **kwargs):
-
     """
     CSV export of location data for a given prefix
     """

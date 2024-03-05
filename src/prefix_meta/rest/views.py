@@ -34,7 +34,6 @@ class PrefixMeta(viewsets.GenericViewSet):
     )
     @grainy_endpoint(namespace="meta.prefix.location.{request.org.permission_id}")
     def all_by_type(self, request, org, instance, typ, ip, mask, *args, **kwargs):
-
         """
         Lists all meta data for a given prefix. The type of meta data is
         specified by the `typ` parameter. The `ip` and `mask` parameters specify
