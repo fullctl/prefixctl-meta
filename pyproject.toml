@@ -61,8 +61,3 @@ pymdgen = "pymdgen.md:Extension"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.isort]
-profile = "black"
-multi_line_output = 3
-
