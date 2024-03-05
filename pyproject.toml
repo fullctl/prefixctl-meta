@@ -1,0 +1,68 @@
+[tool.poetry]
+name = "prefixctl-meta"
+version = "0.1.0"
+description = "Prefix meta data for PrefixCtl"
+readme = "README.md"
+repository = "https://github.com/fullctl/prefixctl-meta/"
+authors = [ "20C <code@20c.com>",]
+license = "Apache-2.0"
+classifiers = [
+  "Topic :: Software Development",
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+packages = [
+    { include = "prefix_meta", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pygments = "^2.14"
+rdap = "^1.5"
+xmltodict = "^0.13.0"
+structlog = ">=23.1.0"
+pydantic = ">=2.6.3"
+
+[tool.poetry.dev-dependencies]
+# testing
+coverage = ">=5"
+pytest = ">=6"
+pytest-django = ">=3.8"
+pytest-filedata = ">=0.4.0"
+pytest-cov = "*"
+tox = ">=3.20"
+tox-gh-actions = ">=2.9.1"
+
+# linting
+bandit = ">=1.6.2"
+mypy = ">=0.950"
+pre-commit = ">=2.13"
+pyupgrade = ">=2.19"
+ruff = ">=0.1"
+
+# docs
+markdown = "*"
+markdown-include = ">=0.5,<1"
+mkdocs = ">=1.2.3"
+
+# ctl
+ctl = ">=1"
+jinja2 = ">=2"
+tmpl = ">=1"
+twine = ">=3"
+
+[tool.poetry.plugins."markdown.extensions"]
+pymdgen = "pymdgen.md:Extension"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+

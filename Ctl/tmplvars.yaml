@@ -1,0 +1,12 @@
+project_name: "prefixctl-meta"
+
+package:
+  repository:
+  description: Prefix meta data for PrefixCtl
+  installable: true
+  documentation: false
+  copyright: 2024
+  license: "Apache-2.0"
+  status: 4 - Beta
+  version: 0.1.0
+
